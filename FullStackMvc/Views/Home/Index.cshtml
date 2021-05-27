@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<form class="align-content-center">
+    <div class="login">
+        <input type="text" id="name" name="username" pattern="[A-Za-z]{1,}" placeholder="שם משתמש" required>
+        <br />
+        <input type="password" id="pass" name="password" pattern="[0-9]{1,}" placeholder="סיסמה" required>
+        <br />
+        <input type="button" id="login" value="כניסה">
+    </div>
+</form>
+
+<script type="text/javascript">
+
+    $('#login').click(function() {
+
+        var name = $("#name").val();
+        var pass = $("#pass").val();
+
+        $.ajax({
+            url: '/Home/LoigIn?name='+name+'&password='+pass,
+            type: 'POST',
+            dataType: 'json',
+            data: { id: 'value' },
+            success: function(data) {
+                alert("success");
+            },
+            error: function() {
+                alert('error');
+            }
+        });
+
+    });
+
+    function isNumeric(str) {
+        if (typeof str != "string") {
+            return false;
+        }
+        return !isNaN(str) && 
+            !isNaN(parseFloat(str));
+    }
+
+</script> 

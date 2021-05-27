@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdventureWorks2012ModelStoreContainer" CdmEntityContainer="AdventureWorks2012Entities">
+    <FunctionImportMapping FunctionImportName="spAdamQuery" FunctionName="AdventureWorks2012Model.Store.spAdamQuery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2012Model.spAdamQuery_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SalesOrderCount" ColumnName="SalesOrderCount" />
+          <ScalarProperty Name="OrderQtySum" ColumnName="OrderQtySum" />
+          <ScalarProperty Name="UnitPriceSum" ColumnName="UnitPriceSum" />
+          <ScalarProperty Name="SalesOrderDetailCount" ColumnName="SalesOrderDetailCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
